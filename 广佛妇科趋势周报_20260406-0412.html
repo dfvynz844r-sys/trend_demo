@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>广佛妇科服务趋势 · 近7天周报（4.6-4.12）</title>
+<style>
+:root{--bg:#0f1117;--card:#1a1d27;--card2:#21253a;--accent:#e8668b;--accent2:#6b8ef7;--text:#e2e4ef;--muted:#7a7d99;--border:#2a2d40;--green:#4fbf7f;--orange:#f7a94f;--purple:#b07fe8;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+.header{background:linear-gradient(135deg,#1a1d27 0%,#1a1028 100%);border-bottom:1px solid var(--border);padding:20px 28px;position:sticky;top:0;z-index:100;}
+.header h1{font-size:18px;font-weight:700;color:#fff;}
+.header .sub{font-size:12px;color:var(--muted);margin-top:4px;}
+.stats-row{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;}
+.stat{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:8px 16px;text-align:center;font-size:12px;}
+.stat strong{display:block;font-size:20px;font-weight:700;}
+.stat strong.c1{color:var(--accent);}
+.stat strong.c2{color:var(--accent2);}
+.stat strong.c3{color:var(--green);}
+.stat strong.c4{color:var(--orange);}
+.stat span{font-size:11px;color:var(--muted);}
+.tab-nav{display:flex;flex-wrap:wrap;gap:6px;padding:16px 28px;background:var(--bg);border-bottom:1px solid var(--border);}
+.tab-btn{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:12px;color:var(--muted);cursor:pointer;transition:all .2s;white-space:nowrap;}
+.tab-btn:hover{color:var(--text);border-color:var(--accent);}
+.tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);font-weight:600;}
+.content{max-width:1200px;margin:0 auto;padding:24px;}
+.hospital-section{display:none;}
+.hospital-section.active{display:block;}
+.hospital-header{display:flex;align-items:flex-start;gap:16px;margin-bottom:24px;background:var(--card);border-radius:16px;padding:20px;border:1px solid var(--border);flex-wrap:wrap;}
+.hospital-icon{font-size:32px;width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;flex-shrink:0;}
+.hospital-info{flex:1;min-width:200px;}
+.hospital-info h2{font-size:18px;color:#fff;margin-bottom:6px;}
+.hospital-meta{font-size:12px;color:var(--muted);margin-bottom:4px;}
+.post-count-badge{background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;white-space:nowrap;}
+.posts-grid{display:flex;flex-direction:column;gap:14px;}
+.post-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color .2s;}
+.post-card:hover{border-color:var(--accent);}
+.post-header{display:flex;align-items:flex-start;gap:12px;padding:16px 18px 12px;}
+.post-type-icon{font-size:26px;flex-shrink:0;width:42px;height:42px;background:var(--card2);border-radius:10px;display:flex;align-items:center;justify-content:center;}
+.post-header-info{flex:1;}
+.post-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:4px;line-height:1.4;}
+.post-time{font-size:11px;color:var(--muted);}
+.post-body{font-size:13px;color:var(--text);padding:0 18px 14px;line-height:1.7;border-bottom:1px solid var(--border);}
+.post-summary{font-size:12px;color:#b0b3c8;padding:10px 18px 14px;line-height:1.7;background:#161925;}
+.post-summary strong{color:var(--accent);}
+.post-footer{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:12px 18px;}
+.tag{background:var(--card2);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:11px;color:var(--text);}
+.post-link{margin-left:auto;font-size:12px;color:var(--accent2);text-decoration:none;white-space:nowrap;}
+.post-link:hover{text-decoration:underline;}
+.footer{text-align:center;padding:24px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px;}
+.insight-card{background:linear-gradient(135deg,#1e1530 0%,#1a1d27 100%);border:1px solid #3a2d55;border-radius:12px;padding:18px 20px;margin-bottom:14px;}
+.insight-card h3{font-size:14px;color:var(--purple);margin-bottom:8px;}
+.insight-card p{font-size:13px;color:var(--text);line-height:1.7;}
+.highlight-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-top:16px;}
+.highlight-box h3{font-size:14px;color:var(--orange);margin-bottom:10px;}
+.highlight-box ul{padding-left:18px;font-size:13px;line-height:1.8;}
+.highlight-box li{margin-bottom:4px;}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>📊 广佛妇科服务趋势 · 近7天周报</h1>
+  <div class="sub">覆盖佛山 + 广州三甲医院 · 妇科/妇产/母婴健康方向 · 2026.04.06 – 04.12</div>
+  <div class="stats-row">
+    <div class="stat"><strong class="c1">6</strong><span>条宏观趋势</span></div>
+    <div class="stat"><strong class="c2">10</strong><span>家重点医院</span></div>
+    <div class="stat"><strong class="c3">21</strong><span>条动态情报</span></div>
+    <div class="stat"><strong class="c4">3</strong><span>条业务启示</span></div>
+  </div>
+</div>
+<div class="tab-nav">
+<button class="tab-btn" onclick="showTab('宏观')" id="tab-宏观">🏛️ 宏观趋势</button>
+<button class="tab-btn" onclick="showTab('禅医')" id="tab-禅医">⭐ 佛山复星禅诚</button>
+<button class="tab-btn" onclick="showTab('市一')" id="tab-市一">佛山市一</button>
+<button class="tab-btn" onclick="showTab('妇幼')" id="tab-妇幼">佛山妇幼</button>
+<button class="tab-btn" onclick="showTab('市二')" id="tab-市二">佛山市二</button>
+<button class="tab-btn" onclick="showTab('中院')" id="tab-中院">佛山中医院</button>
+<button class="tab-btn" onclick="showTab('妇儿')" id="tab-妇儿">🏥 广州妇儿中心</button>
+<button class="tab-btn" onclick="showTab('中山一')" id="tab-中山一">中山一院</button>
+<button class="tab-btn" onclick="showTab('广医三')" id="tab-广医三">广医三院</button>
+<button class="tab-btn" onclick="showTab('省妇幼')" id="tab-省妇幼">省妇幼</button>
+<button class="tab-btn" onclick="showTab('启示')" id="tab-启示">💡 业务启示</button>
+</div>
+<div class="content">
+
+<!-- ===== 宏观趋势 ===== -->
+<div class="hospital-section" id="sec-宏观">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--accent2)20;">🏛️</div>
+  <div class="hospital-info">
+    <h2>宏观趋势</h2>
+    <div class="hospital-meta">全国/广东/广州政策与行业风向 · 2026年4月6日–12日</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--accent2);">6 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏛️</div>
+      <div class="post-header-info">
+        <div class="post-title">【重磅】全国深化医改推广会在广州召开，明确"强基、稳二、控三"方向</div>
+        <div class="post-time">📅 2026-04-11 ~ 04-12</div>
+      </div>
+    </div>
+    <div class="post-body">4月11日至12日，2026全国深化医改经验推广会暨中国卫生发展会议在广州召开，主题为"'学三明、抓医改'聚焦深化以公益性为导向的公立医院改革"。国卫健委明确：让三级医院回归疑难重症，二级医院和基层成为群众健康"守门人"。广东"镇属市管"、广州妇儿区域医疗中心等作为典型案例展示。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>这是近7天最重要的行业事件。会议释放的信号直接影响广佛医院发展路径——三甲医院须聚焦疑难重症，基层承接常见病。佛山复星禅诚FIMC的国际医疗试点定位契合"疑难重症"方向，面临政策利好。</div>
+    <div class="post-footer">
+      <span class="tag">🏛️ 国家级会议</span>
+      <span class="tag">📍 广州</span>
+      <span class="tag">🔥 本周最重要</span>
+      <a class="post-link" href="https://www.news.cn/politics/20260411/04d582d0826e4b0a9d1086c2c31e350d/c.html" target="_blank">→ 新华社</a>
+      <a class="post-link" href="https://health.ycwb.com/2026-04/12/content_54059403.htm" target="_blank">→ 羊城晚报</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">📋</div>
+      <div class="post-header-info">
+        <div class="post-title">【政策】广东明确未来医改五大发力点</div>
+        <div class="post-time">📅 2026-04-11</div>
+      </div>
+    </div>
+    <div class="post-body">省卫健委主任刘利群在全国医改推广会上提出五大方向：①优化资源规划布局 ②健全多元筹资机制 ③强化"三医"协同治理 ④完善系统连续服务体系 ⑤守牢质量安全底线。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>"三医协同"和"系统连续服务"两个方向与妇产专科直接相关——DRG/DIP支付改革下妇产手术收入结构将变，而"连续服务"利好孕产全周期管理模式。</div>
+    <div class="post-footer">
+      <span class="tag">📋 政策方向</span>
+      <span class="tag">📍 广东</span>
+      <a class="post-link" href="https://news.southcn.com/node_54a44f01a2/1837a1cae1.shtml" target="_blank">→ 南方网</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">💳</div>
+      <div class="post-header-info">
+        <div class="post-title">【便民】广东"一次挂号管三天"全省推开，检查互认持续扩面</div>
+        <div class="post-time">📅 2026-01-01起实施</div>
+      </div>
+    </div>
+    <div class="post-body">自2026年1月1日起，"一次挂号管三天"实现全省公立医疗机构全覆盖。检查检验结果互认项目持续扩面（广州已达1436项、深圳526项），地市间互认项目超过200项。全国医改推广会上广东便民就医举措作为典型经验分享。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>检查互认持续扩面是便民就医的核心抓手。民营医院（如禅医）可借此宣传"检查互认+自费项目优化"组合优势，降低患者就医决策门槛。</div>
+    <div class="post-footer">
+      <span class="tag">💳 便民就医</span>
+      <span class="tag">📍 广东全省</span>
+      <a class="post-link" href="https://local.cctv.com/2026/02/02/ARTIYXfWXMJG9I8mDRCzq9Qg260202.shtml" target="_blank">→ 央视网</a>
+      <a class="post-link" href="https://m.mp.oeeee.com/a/BAAFRD0000202604101554436.html" target="_blank">→ 南方都市报</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🤖</div>
+      <div class="post-header-info">
+        <div class="post-title">【行业】AI赋能医疗资源下沉成为医改新共识</div>
+        <div class="post-time">📅 2026-04-12</div>
+      </div>
+    </div>
+    <div class="post-body">新华社报道：人工智能正成为医疗资源下沉的重要推力。江苏、天津等地已将AI应用于影像诊断和康复训练。全国推广会将数字化赋能纳入推动优质资源扩容下沉的关键手段。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>AI+医疗从概念进入政策落地阶段。广佛三甲医院（市一获智慧医疗双奖、广妇儿筹建基因细胞治疗中心）均在布局，禅医可考虑AI辅助诊疗在妇产领域的应用。</div>
+    <div class="post-footer">
+      <span class="tag">🤖 AI+医疗</span>
+      <span class="tag">📍 全国</span>
+      <a class="post-link" href="https://www.news.cn/tech/20260407/74c2a2626c1942b38f44e103b39522e4/c.html" target="_blank">→ 新华社</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">💊</div>
+      <div class="post-header-info">
+        <div class="post-title">【政策】广州医疗服务价格改革第二批方案公布，6月30日落地</div>
+        <div class="post-time">📅 2026-04-07公布 · 06-30执行</div>
+      </div>
+    </div>
+    <div class="post-body">第二批涉及麻醉、呼吸、消化、泌尿、康复等11类项目，延续"检查降、劳务升"方向。新增700余项新型医疗服务价格项目，涵盖安宁疗护、药学门诊、微创精准治疗等前沿领域。便民门诊挂号费医保报销后仅1.1元。首批（3.30生效）中唐筛从1568.6元降至560元，降幅超64%。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>"劳务升"利好手术/技术密集型服务，对禅医妇科微创手术收入构成积极影响。同时唐筛大幅降价释放信号——检验类项目回归物耗成本定价，自费高端检查面临公立价格挤压。</div>
+    <div class="post-footer">
+      <span class="tag">💊 价格改革</span>
+      <span class="tag">📍 广州</span>
+      <span class="tag">⏰ 6.30落地</span>
+      <a class="post-link" href="https://www.gz.gov.cn/zt/shb/content/post_10754607.html" target="_blank">→ 广州市政府</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">👶</div>
+      <div class="post-header-info">
+        <div class="post-title">【数据】广东连续8年蝉联第一生育大省，连续6年出生人口超百万</div>
+        <div class="post-time">📅 2026-04-12公布</div>
+      </div>
+    </div>
+    <div class="post-body">南方网报道：广东连续8年蝉联第一生育大省、连续6年全国唯一出生人口超百万的省份。孕产妇死亡率降至7.22/10万，婴儿死亡率降至1.94‰，均创历史最优。国家自2025年起实施育儿补贴制度（每孩每年3600元），广东已落地执行。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>广东既是"生育大户"也是"政策高地"。全国性育儿补贴+地方配套政策直接利好孕产服务需求。佛山作为广东第三城，妇产服务增量空间显著。</div>
+    <div class="post-footer">
+      <span class="tag">👶 生育数据</span>
+      <span class="tag">📍 广东</span>
+      <a class="post-link" href="https://news.southcn.com/node_54a44f01a2/1837a1cae1.shtml" target="_blank">→ 南方网</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 佛山复星禅诚 ===== -->
+<div class="hospital-section" id="sec-禅医">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--accent)20;">⭐</div>
+  <div class="hospital-info">
+    <h2>佛山复星禅诚医院</h2>
+    <div class="hospital-meta">佛山 · 港澳药械通首批试点 · 国际医疗中心（FIMC）</div>
+  </div>
+  <div class="post-count-badge">2 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">💊</div>
+      <div class="post-header-info">
+        <div class="post-title">【重磅】Allurion口服减重胃球囊正式首发，推出"五师共管"全周期服务</div>
+        <div class="post-time">📅 2026-04-11 · 首例4月1日完成</div>
+      </div>
+    </div>
+    <div class="post-body">继4月1日完成中国内地首例植入后，禅医正式举行Allurion口服减重胃球囊首发仪式。该技术通过"港澳药械通"引进，全球60+国家已完成超20万例，被美国ASMBS列为肥胖治疗第五种标准方案。无创门诊即可完成，15分钟吞服，4个月后自动排出。医院同步推出"五师共管"全周期服务（医师+营养师+运动师+心理咨询师+健康管理师），结合智能秤与专属App数字随访一年。副院长梁舒镇透露禅医累计引进超50款国际创新药械。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>这是本周佛山医疗界最具传播力的事件。"首例→首发→全周期服务"的完整链条展示禅医从"引进技术"到"构建服务体系"的能力跃迁。"五师共管"模式可直接复用至妇科内分泌（多囊卵巢、产后体重管理）等领域，形成标准化服务SOP。</div>
+    <div class="post-footer">
+      <span class="tag">💊 港澳药械通</span>
+      <span class="tag">⭐ 本周头条</span>
+      <span class="tag">🌍 大湾区首例</span>
+      <a class="post-link" href="https://huacheng.gz-cmc.com/pages/2026/04/11/8320e108ca2945a3b7101d2d31fd6ea0.html" target="_blank">→ 广州日报</a>
+      <a class="post-link" href="https://dl.cnr.cn/cyxgc/20260403/t20260403_527572235.shtml" target="_blank">→ 央广网</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏥</div>
+      <div class="post-header-info">
+        <div class="post-title">【运营】FIMC国际医疗中心深度运营：双医师模式+52个药械批件</div>
+        <div class="post-time">📅 2026-04-03深度报道</div>
+      </div>
+    </div>
+    <div class="post-body">佛山新闻网发布FIMC启幕深度报道，首次披露"双医师"管理模式——"全科+专科"为每位患者定制"一人一方案"。已与30余家全球商业保险直付，13位香港执业医师常态化坐诊，中美国际MDT常态化开展。中心配备华南仅4台的安科锐第六代射波刀、达芬奇手术机器人；依托"港澳药械通"已获批52个国际创新药械批件，落地多项大湾区首例应用（软骨再生胶原蛋白支架、乳腺癌创新药等）。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>本周FIMC运营信息集中释放。"双医师+保险直付+香港医生坐诊+药械通52批件"构成国际化差异化壁垒，这一组合在广佛地区独一无二。建议加速产品化输出（如国际孕产套餐、跨境肿瘤诊疗方案）。</div>
+    <div class="post-footer">
+      <span class="tag">🏥 FIMC运营</span>
+      <span class="tag">🌍 国际化</span>
+      <span class="tag">📋 52个批件</span>
+      <a class="post-link" href="https://www.foshannews.net/h/175/20260403/858374.html" target="_blank">→ 佛山新闻网</a>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+
+<!-- ===== 佛山市一 ===== -->
+<div class="hospital-section" id="sec-市一">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--accent2)20;">🏥</div>
+  <div class="hospital-info">
+    <h2>佛山市第一人民医院</h2>
+    <div class="hospital-meta">佛山 · 三甲综合 · "镇属市管"医改典型</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--accent2);">2 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏆</div>
+      <div class="post-header-info">
+        <div class="post-title">【医改】"镇属市管"模式作为典型样本在全国医改推广会展示</div>
+        <div class="post-time">📅 2026-04-10报道 · 04-11推广会展示</div>
+      </div>
+    </div>
+    <div class="post-body">市一托管顺德龙江医院，肿瘤、心脑血管核心资源整体下沉，数月内镇级社区卫生服务站即具备儿科等核心服务能力。佛山"镇属市管"模式在全国深化医改推广会上作为典型案例展示。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>市一的"镇属市管"模式被全国推广，显示佛山医改获得中央认可。市一通过资源下沉强化了区域龙头地位，对禅医构成竞争压力——禅医需更聚焦高端差异化，避免与市一在基层市场正面竞争。</div>
+    <div class="post-footer">
+      <span class="tag">🏆 全国典型</span>
+      <span class="tag">🏥 医改模式</span>
+      <a class="post-link" href="https://m.mp.oeeee.com/a/BAAFRD0000202604101554436.html" target="_blank">→ 南方都市报</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">💡</div>
+      <div class="post-header-info">
+        <div class="post-title">【智慧医疗】获2026广东省智慧医疗创新大赛双奖</div>
+        <div class="post-time">📅 2026-04-03</div>
+      </div>
+    </div>
+    <div class="post-body">病案数据全脱敏技术获三等奖，实现数据安全与科研价值兼顾；门急诊用血"一站式"智慧输血流程获优秀奖，打通多系统壁垒，大幅提升用血效率。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>市一在智慧医疗领域的投入持续产出成果。智慧输血流程对妇科手术（尤其产后出血、肿瘤手术）有直接参考价值，禅医可关注类似系统化流程优化的可能性。</div>
+    <div class="post-footer">
+      <span class="tag">💡 智慧医疗</span>
+      <span class="tag">🏆 双奖</span>
+      <a class="post-link" href="https://foshan.ifeng.com/c/8s1b5okBcvK" target="_blank">→ 凤凰网佛山</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 佛山妇幼 ===== -->
+<div class="hospital-section" id="sec-妇幼">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--pink)20;">👶</div>
+  <div class="hospital-info">
+    <h2>佛山市妇幼保健院</h2>
+    <div class="hospital-meta">佛山 · 广东医科大学附属佛山妇女儿童医院 · 一院三区</div>
+  </div>
+  <div class="post-count-badge" style="background:#e8668b;">1 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🔑</div>
+      <div class="post-header-info">
+        <div class="post-title">【人事变动】院长苏晞调任市二医院，干细胞重点实验室持续推进</div>
+        <div class="post-time">📅 2026-04-03（此前已报道，本周持续发酵）</div>
+      </div>
+    </div>
+    <div class="post-body">原佛山妇幼保健院院长苏晞调任佛山市第二人民医院院长，免去妇幼保健院院长职务。苏晞曾任市妇幼副院长，有丰富妇产专科管理经验，此次为平级调任。干细胞与妇幼健康重点实验室2026年度第一次全体会议此前已召开（3.24），聚焦制度建设、人才培养及临床科室合作深化。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>院长调动对佛山妇幼近期战略执行构成不确定性。干细胞实验室聚焦制度建设而非突破性成果，显示该院目前处于"稳基"阶段。禅医可趁窗口期强化在佛山妇产领域的品牌声量。</div>
+    <div class="post-footer">
+      <span class="tag">🔑 人事变动</span>
+      <span class="tag">🧬 干细胞</span>
+      <a class="post-link" href="https://m.mp.oeeee.com/a/BAAFRD0000202604081553156.html" target="_blank">→ 南方都市报</a>
+      <a class="post-link" href="https://news.qq.com/rain/a/20260408A06ITV00" target="_blank">→ 腾讯新闻</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 佛山市二 ===== -->
+<div class="hospital-section" id="sec-市二">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--green)20;">🏥</div>
+  <div class="hospital-info">
+    <h2>佛山市第二人民医院</h2>
+    <div class="hospital-meta">佛山 · 绿岛湖新院区 · 新院长苏晞到任</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--green);">2 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🔑</div>
+      <div class="post-header-info">
+        <div class="post-title">【人事】新院长苏晞正式履新，产科已整体搬迁绿岛湖院区</div>
+        <div class="post-time">📅 2026-04-03任命 · 产科4.1搬迁完成</div>
+      </div>
+    </div>
+    <div class="post-body">苏晞正式被任命为市二医院院长。产科于4月1日完成整体搬迁至绿岛湖院区，占地120亩，规划床位1200张（远期1800张），日门诊量可达1万人次。新院长到任+院区搬迁双重变化，绿岛湖院区产科全面承接诊疗服务。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>苏晞兼具妇产专科经验和综合医院管理视野，叠加绿岛湖院区产科搬迁完成，市二正在快速整合妇产服务能力。禅医需密切关注市二绿岛湖产科运营动态，预判其对禅城孕产市场的分流效应。</div>
+    <div class="post-footer">
+      <span class="tag">🔑 人事变动</span>
+      <span class="tag">🏥 院区搬迁</span>
+      <a class="post-link" href="https://m.mp.oeeee.com/a/BAAFRD0000202604081553156.html" target="_blank">→ 南方都市报</a>
+      <a class="post-link" href="https://news.qq.com/rain/a/20260408A06ITV00" target="_blank">→ 腾讯新闻</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🅿️</div>
+      <div class="post-header-info">
+        <div class="post-title">【便民】全市首创夜间共享停车，4月7日正式上线</div>
+        <div class="post-time">📅 2026-04-07</div>
+      </div>
+    </div>
+    <div class="post-body">佛山市第二人民医院推出全市首创夜间共享停车服务，面向周边居民开放80个夜间错时停车位，有效缓解就医停车难问题。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>虽为非医疗核心举措，但就医体验优化是当前政策重点方向（全国推广会多次提及），市二率先行动值得关注。禅医可对标类似"就医全流程体验优化"措施。</div>
+    <div class="post-footer">
+      <span class="tag">🅿️ 便民服务</span>
+      <span class="tag">✅ 全市首创</span>
+      <a class="post-link" href="https://huacheng.gz-cmc.com/pages/2026/04/01/87435c9e42bb42da93e285a22f7b7df8.html" target="_blank">→ 广州日报</a>
+      <a class="post-link" href="https://www.foshanplus.com/news/300366509.html?cids=2" target="_blank">→ 佛山+</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 佛山中医院 ===== -->
+<div class="hospital-section" id="sec-中院">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--orange)20;">🌿</div>
+  <div class="hospital-info">
+    <h2>佛山市中医院</h2>
+    <div class="hospital-meta">佛山 · "镇属市管"试点 · 新城院区筹建中</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--orange);">1 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏆</div>
+      <div class="post-header-info">
+        <div class="post-title">【医改】"镇属市管"模式全国展示，佛山10轮价格调整1695项</div>
+        <div class="post-time">📅 2026-04-10（推广会前报道）</div>
+      </div>
+    </div>
+    <div class="post-body">南方都市报深度报道佛山医改成果：中医院托管三水白坭医院，建成5个名医工作室、引进31项中医药适宜技术。全市累计10轮医疗服务价格调整涉及1695项，公立医院人员支出占比提升至45%（比改革前+8%），员工满意度连续三年全省第一。新城院区项目（46.24亿元）各项筹备基本就绪。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>中医院"镇属市管"+新城院区双线推进，扩张意图明显。中医妇科是其潜在增长点，新城院区建成后将进一步拓展中医妇产服务能力，对禅医构成中长期竞争。</div>
+    <div class="post-footer">
+      <span class="tag">🏆 医改典型</span>
+      <span class="tag">🏗️ 新院区46亿</span>
+      <a class="post-link" href="https://m.mp.oeeee.com/a/BAAFRD0000202604101554436.html" target="_blank">→ 南方都市报</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 广州妇儿中心 ===== -->
+<div class="hospital-section" id="sec-妇儿">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--accent2)20;">🏥</div>
+  <div class="hospital-info">
+    <h2>广州医科大学附属妇女儿童医疗中心</h2>
+    <div class="hospital-meta">广州 · 国家级儿童医学中心 · 连续七年国考A</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--accent2);">5 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏆</div>
+      <div class="post-header-info">
+        <div class="post-title">【重磅】连续七年"国考"获最高等级A，国自然连续10年同类第一</div>
+        <div class="post-time">📅 2026-04-09公布</div>
+      </div>
+    </div>
+    <div class="post-body">国家卫健委公布2024年度公立儿童专科医院绩效监测结果，广州妇儿中心再获最高等级A。2025年门急诊489万人次，出院16.7万，手术12万台，分娩3万。达芬奇机器人手术覆盖50+病种、累计超1000例；儿童心脏移植19例居全国儿童专科首位。国自然基金立项连续10年全国同类专科第一（累计338项），SCI论文928篇，总IF 4481分。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>广妇儿的"七连A+十连冠"构成华南妇儿领域的绝对标杆。其达芬奇手术1000例+经验、MDT门诊132个的模式值得禅医学习。禅医已引进达芬奇机器人，可参考广妇儿的病种覆盖路径加速妇科手术机器人应用。</div>
+    <div class="post-footer">
+      <span class="tag">🏆 七连A</span>
+      <span class="tag">🔬 国自然十连冠</span>
+      <span class="tag">🤖 达芬奇超千台</span>
+      <a class="post-link" href="https://www.sohu.com/a/1008029529_121118803" target="_blank">→ 搜狐</a>
+      <a class="post-link" href="https://www.gzfezx.com/news/show/11851.html" target="_blank">→ 官网</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏛️</div>
+      <div class="post-header-info">
+        <div class="post-title">【全国推广会】柳州医院+花都模式作为区域医疗中心样本展示</div>
+        <div class="post-time">📅 2026-04-10 ~ 04-12</div>
+      </div>
+    </div>
+    <div class="post-body">广妇儿柳州医院平移电子病历系统，新增18个儿科亚专科，开展292项新技术，作为跨省区域医疗中心建设样本向全国推广。花都区医疗集团"基层检查、上级诊断"互认率超99%，获医保奖励1121万元。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>花都模式互认率超99%+医保奖励1121万的案例极具借鉴意义。禅医可探索与佛山基层医疗机构建立类似的"检查互认+转诊激励"机制，既提升患者体验又获得医保政策支持。</div>
+    <div class="post-footer">
+      <span class="tag">🏛️ 全国推广</span>
+      <span class="tag">📊 互认率99%+</span>
+      <span class="tag">💰 医保奖励1121万</span>
+      <a class="post-link" href="https://m.mp.oeeee.com/a/BAAFRD0000202604101554436.html" target="_blank">→ 南方都市报</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🗺️</div>
+      <div class="post-header-info">
+        <div class="post-title">【战略】院长周文浩发布"十五五"规划：南沙筹建基因细胞治疗中心</div>
+        <div class="post-time">📅 2026-04-03（广州日报专访）</div>
+      </div>
+    </div>
+    <div class="post-body">院长周文浩接受广州日报专访，发布"十五五"发展战略：①花都院区已封顶 ②南沙院区筹建妇幼健康创新研究院和基因细胞治疗中心 ③重点发展生殖—母胎—新生儿一体化 ④筹建广州市公共细胞库 ⑤打造大湾区妇幼国际医疗中心 ⑥已开设132个MDT门诊。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>广妇儿的"十五五"规划显示其从"治病"向"健康管理+前沿技术"转型。基因细胞治疗中心和公共细胞库是未来十年的关键布局，禅医FIMC可考虑在细胞治疗领域寻求合作而非竞争。</div>
+    <div class="post-footer">
+      <span class="tag">🗺️ 十五五规划</span>
+      <span class="tag">🧬 基因细胞治疗</span>
+      <a class="post-link" href="https://huacheng.gz-cmc.com/pages/2026/03/30/62233d7fde444fc7889864a4779f19e0.html" target="_blank">→ 广州日报</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🔬</div>
+      <div class="post-header-info">
+        <div class="post-title">【学术】首提坏死性小肠结肠炎免疫血栓机制，获美好医院示范奖</div>
+        <div class="post-time">📅 2026-04-04 / 04-08</div>
+      </div>
+    </div>
+    <div class="post-body">周文浩/夏慧敏/钟微团队在国际权威期刊发表成果，首次提出坏死性小肠结肠炎发病的免疫血栓机制。同时广州妇儿中心荣获"中国美好医院建设示范奖"，为中南地区唯一上榜医院。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>学术成果+建设奖项双丰收，强化广妇儿在华南妇儿的学术话语权和品牌影响力。禅医可关注其学术营销路径——将临床成果快速转化为品牌资产。</div>
+    <div class="post-footer">
+      <span class="tag">🔬 学术突破</span>
+      <span class="tag">🏆 美好医院奖</span>
+      <a class="post-link" href="https://www.gzfezx.com/news/show/11828.html" target="_blank">→ 官网</a>
+      <a class="post-link" href="https://www.sohu.com/a/1005256415_121118803" target="_blank">→ 搜狐</a>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🎗️</div>
+      <div class="post-header-info">
+        <div class="post-title">【公益】世界孤独症日大型公益病友会，探索麻醉跨界治疗新路径</div>
+        <div class="post-time">📅 2026-04-02</div>
+      </div>
+    </div>
+    <div class="post-body">广州妇儿中心在增城院区举办大型公益病友会，联合广东省医学会麻醉治疗学分会，探索麻醉跨界治疗孤独症新路径。麻醉科宋兴荣主任团队用低浓度七氟烷进行综合治疗，家长分享"一次治疗给了整个家庭希望"。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>借势健康日（世界孤独症日4.2）开展公益活动+学术探索，是高效的品牌传播方式。禅医可参考此类"健康日+公益+学术"三合一的营销组合拳。</div>
+    <div class="post-footer">
+      <span class="tag">🎗️ 健康日营销</span>
+      <span class="tag">💚 公益活动</span>
+      <a class="post-link" href="https://health.ycwb.com/2026-04/03/content_54046786.htm" target="_blank">→ 羊城晚报</a>
+      <a class="post-link" href="https://www.gzfezx.com/news/show/11844.html" target="_blank">→ 官网</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 中山一院 ===== -->
+<div class="hospital-section" id="sec-中山一">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--purple)20;">🏛️</div>
+  <div class="hospital-info">
+    <h2>中山大学附属第一医院</h2>
+    <div class="hospital-meta">广州 · 国家级综合三甲 · 国际医疗中心</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--purple);">1 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🌍</div>
+      <div class="post-header-info">
+        <div class="post-title">【国际医疗】中新社探访国际医疗中心：服务40国患者，外籍需求增76%</div>
+        <div class="post-time">📅 2026-04-02（本周持续传播）</div>
+      </div>
+    </div>
+    <div class="post-body">中新社探访中山一院国际医疗中心：配备达芬奇手术机器人、EKOS超声溶栓系统；支持跨境保险直付、多语种陪诊；南沙院区智能流水线10分钟出结果。已服务40国数千名外籍患者，2025年外籍住院需求同比增长76%。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>中山一院国际医疗中心是禅医FIMC最直接的"对标对象"。其"保险直付+多语种+智能流水线"模式已验证可行。禅医FIMC可对标完善服务SOP，并主动对接外籍商会、跨国企业HR拓宽获客渠道。</div>
+    <div class="post-footer">
+      <span class="tag">🌍 国际医疗</span>
+      <span class="tag">📊 需求增76%</span>
+      <a class="post-link" href="https://www.chinanews.com/sh/2026/04-02/10597718.shtml" target="_blank">→ 中新社</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 广医三院 ===== -->
+<div class="hospital-section" id="sec-广医三">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--green)20;">🤝</div>
+  <div class="hospital-info">
+    <h2>广州医科大学附属第三医院（柔济医院）</h2>
+    <div class="hospital-meta">广州 · 百年妇产科传统 · 重症孕产妇救治中心</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--green);">1 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🤝</div>
+      <div class="post-header-info">
+        <div class="post-title">【联盟】妇科联盟"基层吹哨、专家报到"协作救治模式</div>
+        <div class="post-time">📅 2026年3月</div>
+      </div>
+    </div>
+    <div class="post-body">广医三院妇科联盟探索分级诊疗协作模式，基层医院筛查发现后专家及时介入，实现上下级医院快速联动。该模式已在子宫内膜癌等妇科肿瘤的早筛早治中发挥作用。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>"基层吹哨+专家报到"是分级诊疗的理想模型。禅医作为佛山妇科学科龙头，可主动联合基层社区卫生中心建立妇科肿瘤快速转诊通道，与全国医改"强基层"方向高度一致。</div>
+    <div class="post-footer">
+      <span class="tag">🤝 专科联盟</span>
+      <span class="tag">🏥 分级诊疗</span>
+      <span class="tag">⚠️ 具体案例待确认</span>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 省妇幼 ===== -->
+<div class="hospital-section" id="sec-省妇幼">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--orange)20;">🏗️</div>
+  <div class="hospital-info">
+    <h2>广东省妇幼保健院</h2>
+    <div class="hospital-meta">广州 · 省级妇幼龙头 · 番禺院区扩建中</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--orange);">1 条动态</div>
+</div>
+<div class="posts-grid">
+
+  <div class="post-card">
+    <div class="post-header">
+      <div class="post-type-icon">🏗️</div>
+      <div class="post-header-info">
+        <div class="post-title">【基建】番禺院区儿科医疗科技楼建设中，计划2026年8月完工</div>
+        <div class="post-time">📅 2026-04-02更新</div>
+      </div>
+    </div>
+    <div class="post-body">番禺院区儿科医疗科技楼已于2024年6月开工，计划2026年8月完工。该工程已完成水土保持方案审批，进入建设阶段。</div>
+    <div class="post-summary"><strong>📝 周报解读：</strong>省妇幼番禺院区扩建投用后将大幅提升广州南部妇幼服务能力。禅医需关注其竣工时间节点，预判对佛山南部（顺德/南海）患者的虹吸效应。</div>
+    <div class="post-footer">
+      <span class="tag">🏗️ 院区扩建</span>
+      <a class="post-link" href="https://swj.gz.gov.cn/mssw/stbc/content/post_10756845.html" target="_blank">→ 广州市水务局（工程审批）</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== 业务启示 ===== -->
+<div class="hospital-section" id="sec-启示">
+<div class="hospital-header">
+  <div class="hospital-icon" style="background:var(--purple)20;">💡</div>
+  <div class="hospital-info">
+    <h2>业务启示</h2>
+    <div class="hospital-meta">面向佛山复星禅诚医院的可落地建议</div>
+  </div>
+  <div class="post-count-badge" style="background:var(--purple);">3 条启示</div>
+</div>
+<div class="posts-grid">
+
+  <div class="insight-card">
+    <h3>💡 启示一："港澳药械通"品牌效应持续放大，加速SOP标准化复制</h3>
+    <p>Allurion首发仪式获省级媒体报道，"五师共管"模式凸显禅医从"引进技术"到"构建全周期服务体系"的能力跃迁。<strong>建议：</strong>①加速后续创新药械引进→首发→标准化SOP流程复制，形成可复制的"引进—首发—服务化"产品管线；②将"五师共管"模式复用至妇科内分泌（多囊卵巢、产后体重管理）、产后康复等领域，拓展服务品类。</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>💡 启示二：紧跟"一次挂号管三天+检查互认"政策红利，探索跨境互认</h3>
+    <p>全省公立医院已全面推开"一次挂号管三天"，检查互认年省10亿数据在全国推广会上公布。<strong>建议：</strong>①FIMC作为国际医疗试点，可探索国际药械检查结果的跨境互认，打造差异化服务竞争力；②参考广妇儿花都模式（互认率99%+医保奖励1121万），与佛山基层机构建立类似机制。</p>
+  </div>
+
+  <div class="insight-card">
+    <h3>💡 启示三：关注"免陪照护+镇属市管"双重机遇，提前布局</h3>
+    <p>全省仅8市47家医院试点"免陪照护"，佛山尚未全面铺开；佛山"镇属市管"模式被全国推广。<strong>建议：</strong>①禅医可提前布局产后/术后免陪照护服务，结合FIMC高端护理资源，抢占市场先机；②通过专科联盟强化与基层的转诊对接，承接更多疑难病例，同时输出FIMC管理经验，与市一"镇属市管"形成差异化协同。</p>
+  </div>
+
+  <div class="highlight-box">
+    <h3>📈 本周关键信号总结</h3>
+    <ul>
+      <li><strong>政策方向：</strong>全国医改推广会定调"强基、稳二、控三"，三甲聚焦疑难重症，民营高端差异化迎来窗口期</li>
+      <li><strong>佛山格局：</strong>市一"镇属市管"全国推广、市二新院长+产科搬迁、中医院新城院区46亿——竞争格局加速重塑</li>
+      <li><strong>广州标杆：</strong>广妇儿"七连A"持续领跑、花都模式获医保奖励——区域协同+检查互认是可复制的增长路径</li>
+      <li><strong>禅医机遇：</strong>港澳药械通品牌放大、"五师共管"模式可扩展、FIMC国际化壁垒巩固</li>
+    </ul>
+  </div>
+
+</div>
+</div>
+
+</div>
+<div class="footer">
+  报告生成时间：2026-04-13 | 数据来源：新华社、广州日报、南方都市报、南方网、央广网、新浪广东、中新社、羊城晚报、各医院官网/官微<br>
+  覆盖周期：2026年4月6日 – 4月12日 | 仅保留近3月新动态
+</div>
+</div>
+<script>
+function showTab(id){
+  document.querySelectorAll('.hospital-section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('active');
+  document.getElementById('tab-'+id).classList.add('active')
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var first=document.querySelector('.tab-btn');
+  if(first)first.click()
+});
+</script>
+</body>
+</html>
